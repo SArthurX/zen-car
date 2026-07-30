@@ -1,7 +1,3 @@
-#ifndef WEB_PAGE_H
-#define WEB_PAGE_H
-
-const char INDEX_HTML[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -227,6 +223,7 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
       if (isPolling) return;
       isPolling = true;
 
+      // 本地瀏覽器直接開啟 (file://) 模式下，模擬實時波形數據
       if (location.protocol === 'file:') {
         const badge = document.getElementById('btStatus');
         badge.innerText = "💻 本地預覽模式 (模擬波形數據中)";
@@ -284,7 +281,3 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
   </script>
 </body>
 </html>
-
-)rawliteral";
-
-#endif
