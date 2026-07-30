@@ -1,0 +1,3 @@
+#define MY_WIFI_SSID "1n4f"
+#define MY_WIFI_PASS "22833241" 
+#define ZS_040_MAC "98:D3:31:F4:20:B8"
